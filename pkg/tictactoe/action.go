@@ -5,3 +5,7 @@ type Action struct {
 	X      int    `json:"x"`
 	Y      int    `json:"y"`
 }
+
+func (a *Action) Equivalent(b *Action) bool {
+	return a.X == b.X && a.Y == b.Y
+}
